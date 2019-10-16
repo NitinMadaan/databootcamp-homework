@@ -28,10 +28,7 @@ with open(election_csv, 'r') as csvfile:
         TV=TV+1
         Candidates.add(row[2])
         
-    print("Election Results")
-    print("-------------------------")
-    print("Total Votes:" ,TV)
-    print("-------------------------")
+
     
     c_list =list(Candidates)
     
@@ -70,6 +67,15 @@ election_winner = c_list[max_index]
 
 
 # In[31]:
+
+print("ELECTION RESULTS")
+print("----------------------------") 
+for (x, y, z) in zip(c_list, p_votes, vote_count):
+    print("Name: ", x ,"; Percent: ", y, "; Total Votes: ", z )
+print("---------------------------------------------------")
+print("Total votes: " + str(TV))
+print("---------------------------------------------------")
+print("Winner: " + str(election_winner))
 
 
 with open('election_results', 'w') as f:

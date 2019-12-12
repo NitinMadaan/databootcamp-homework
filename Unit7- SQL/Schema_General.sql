@@ -1,0 +1,93 @@
+-- CREATE THE TABLE STRUCTURE AND THEN IMPORT THE CSV
+CREATE TABLE DEPARTMENTS (
+
+							DEPT_NO VARCHAR(30)
+						   ,DEPT_NAME VARCHAR(30)
+						);
+						
+						
+SELECT * FROM  DEPARTMENTS;
+
+
+-- CREATE THE TABLE STRUCTURE AND THEN IMPORT THE CSV
+CREATE TABLE DEPT_EMP (
+							EMP_NO INT
+						   ,DEPT_NO VARCHAR(30)
+						   ,FROM_DATE DATE
+						   ,TO_DATE   DATE
+					 );
+					 
+
+SELECT * FROM  DEPT_EMP;
+
+
+-- CREATE THE TABLE STRUCTURE AND THEN IMPORT THE CSV
+CREATE TABLE DEPT_MANAGER (
+							DEPT_NO VARCHAR(30)
+						   ,EMP_NO INT
+						   ,FROM_DATE DATE
+						   ,TO_DATE   DATE
+						
+						);
+						
+SELECT COUNT(*) FROM DEPT_MANAGER;
+
+
+-- CREATE THE TABLE STRUCTURE AND THEN IMPORT THE CSV
+CREATE TABLE EMPLOYEES (
+							EMP_NO INT
+						   ,BIRTH_DATE DATE
+						   ,FIRST_NAME VARCHAR(30)
+						   ,LAST_NAME  VARCHAR(30)
+						   ,GENDER VARCHAR(1)
+						   ,HIRE_DATE DATE
+					 );
+					 
+					 
+SELECT * FROM EMPLOYEES;
+
+
+-- CREATE THE TABLE STRUCTURE AND THEN IMPORT THE CSV
+CREATE TABLE SALARIES (
+							EMP_NO INT
+						   ,SALARY INT
+						   ,FROM_DATE DATE
+						   ,TO_DATE   DATE
+					 );
+					 
+					 
+SELECT COUNT(*) FROM SALARIES;
+
+
+-- CREATE THE TABLE STRUCTURE AND THEN IMPORT THE CSV
+CREATE TABLE TITLES (
+							EMP_NO INT
+						   ,TITLE VARCHAR(50)
+						   ,FROM_DATE DATE
+						   ,TO_DATE   DATE
+					 );
+					 
+					 
+SELECT COUNT(*) FROM TITLES;
+					 
+
+
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 

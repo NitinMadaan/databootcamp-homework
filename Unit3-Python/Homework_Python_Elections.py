@@ -36,7 +36,7 @@ i = 0
 
 
 length = len(c_list)
-vote_count = [0] * length 
+vc = [0] * length 
 
 
 with open(election_csv, newline='') as csvfile:
@@ -46,7 +46,7 @@ with open(election_csv, newline='') as csvfile:
     
         for i in range(length):
             if row[2] == c_list[i]:
-                vote_count[i] += 1
+                vc[i] += 1
 
 
 p = 0       
@@ -54,13 +54,13 @@ p_votes = []
       
 
 for p in range(length):
-    pv = round(vote_count[p] / TV * 100.00, 2)
+    pv = round(vc[p] / TV * 100.00, 2)
     p_votes.append(pv)
 
 
-max_votes = max(vote_count)
+max_votes = max(vc)
 
-max_index = vote_count.index(max_votes)
+max_index = vc.index(max_votes)
 
 election_winner = c_list[max_index]
          
@@ -70,7 +70,7 @@ election_winner = c_list[max_index]
 
 print("ELECTION RESULTS")
 print("----------------------------") 
-for (x, y, z) in zip(c_list, p_votes, vote_count):
+for (x, y, z) in zip(c_list, p_votes, vc):
     print("Name: ", x ,"; Percent: ", y, "; Total Votes: ", z )
 print("---------------------------------------------------")
 print("Total votes: " + str(TV))
@@ -81,7 +81,7 @@ print("Winner: " + str(election_winner))
 with open('election_results', 'w') as f:
     print("ELECTION RESULTS", file=f)
     print("----------------------------",file=f) 
-    for (x, y, z) in zip(c_list, p_votes, vote_count):
+    for (x, y, z) in zip(c_list, p_votes, vc):
         print("Name: ", x ,"; Percent: ", y, "; Total Votes: ", z ,file=f)
     print("---------------------------------------------------",file=f)
     print("Total votes: " + str(TV),file=f)
